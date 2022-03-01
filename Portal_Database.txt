@@ -1,0 +1,132 @@
+
+CREATE DATABASE db_portal;
+
+CREATE TABLE users (
+    id int NOT null AUTO_INCREMENT,
+    email varchar(255),
+    username varchar(255),
+    password varchar(255),
+    verified int(255),
+    token varchar(255),
+    
+    PRIMARY KEY (id)
+    );
+    
+ CREATE TABLE category (
+    id int NOT null AUTO_INCREMENT,
+    category_name varchar(255),
+    category_name_al varchar(255),
+    category_name_mk varchar(255),
+     PRIMARY KEY (id)
+    );
+    
+ CREATE TABLE post (
+    id int NOT null AUTO_INCREMENT,
+    title varchar(255),
+    title_al varchar(255),
+    title_mk varchar(255),
+    text text,
+    text_al text,
+    text_mk text,
+    image varchar(255),
+    date_created datetime,
+    description varchar(255),
+    admin_name varchar(255),
+    cat_id int,
+    PRIMARY KEY (id),
+    FOREIGN KEY (cat_id) REFERENCES category(id) on delete cascade 
+    );
+  
+   CREATE TABLE draft(
+   id int(11) not null AUTO_INCREMENT PRIMARY KEY,
+   title varchar (255),
+   content text,
+ 
+   INSERT INTO draft(title,content)
+   VALUES( 'hello','people');
+   
+   INSERT INTO draft(title,content)
+   VALUES('hello','hhfhf');
+   
+   INSERT INTO draft(title,content)
+   VALUES('hello','world',);
+   
+   CREATE TABLE content(
+   aboutus_title VARCHAR(255),
+   aboutus_title_al VARCHAR(255),
+   aboutus_title_mk VARCHAR(255),
+   aboutus_text text,
+   aboutus_text_al text,
+   aboutus_text_mk text,
+   contact_title VARCHAR(255),
+   contact_title_al VARCHAR(255),
+   contact_title_mk VARCHAR(255),
+   contact_text text,
+   contact_text_al text,
+   contact_text_mk text
+   );
+   
+   INSERT INTO content (aboutus_title,aboutus_title_al,aboutus_title_mk, aboutus_text, aboutus_text_al, aboutus_text_mk, contact_title, contact_title_al,  contact_title_mk,contact_text,contact_text_al,contact_text_mk)
+ VALUES ('About Us','Rreth Nesh','За нас',
+   'The vision of the Digital School is to provide every child with access to quality teaching of basic knowledge of digital science and modern technologies and programming skills, with instructors with expertise in industry and academia and international programs.
+
+The mission of the Digital School is to impart fundamental knowledge and skills in science and digital technology from an early age. Prepare children for the new information society they will inherit.
+
+Digital School is a private educational institution specialized and dedicated to the education of children and young people from 7 to 18 years in information technology.
+
+The school is international and opened in Macedonia in January 2019, as a result of the great need of the younger generation for deeper learning and knowledge in this field.','Vizioni i Digital School  është t’i sigurojë çdo fëmije qasje në mësimin cilësor të njohurive themelore të shkencave dixhitale dhe teknologjive bashkëkohore dhe aftësive programuese, me instruktorë me ekspertizë  në industri dhe akademi dhe programe ndërkombëtare.
+
+Misioni i Digital School  është të jepë njohuri fundamentale  dhe aftësive për shkenca dhe teknologjidixhitale që në moshë të re. Të përgatisë  fëmijët për shoqërinë e re të informacionit që do të trashëgojnë.
+
+Digital School  është institucion arsimor privat i specializuar dhe i përkushtuar për edukimin e fëmijëve dhe të rinjve nga 7 deri në 18 vjet në teknologjinë e informacionit.
+
+Shkolla është ndërkombëtare dhe u hap në Maqedoni në janar 2019, si rezultat i nevojës së madhe të brezit të ri për mësim më të thellë dhe njohuri në këtë fushë.','Визијата на Дигиталното училиште е да обезбеди секое дете пристап до квалитетно предавање на основните познавања на дигиталните науки и современите технологии и програмски вештини, со инструктори со експертиза во индустријата и академијата и меѓународните програми.
+
+Мисијата на Дигиталното училиште е да ги пренесе основните знаења и вештини во науката и дигиталната технологија уште од најрана возраст. Подгответе ги децата за новото информатичко општество што ќе го наследат.
+
+Дигиталното училиште е приватна образовна институција специјализирана и посветена на едукација на деца и млади од 7 до 18 години во информатичката технологија.
+
+Училиштето е меѓународно и е отворено во Македонија во јануари 2019 година, како резултат на големата потреба на помладата генерација за подлабоко учење и знаење од оваа област.',
+    'Contact Us', 'Na kontaktoni','Контактирајте не',
+    'Call Us:
+    +1-202-555-0182
+    +61 1900 654 321
+
+    Email Us:
+    info@digitalschool.com
+    sales@digitalschool.com
+    marketing@digitalschool.com
+    careers@digitalschool.com',
+    'Na telefononi:
+     + 1-202-555-0182
+     +61 1900 654 321
+
+     Na dërgoni me email:
+     info@digital school.com
+     sales@digital school.com
+     marketing@digital school.com
+     careers@digital school.com ',
+     'Јавете ни се:
+     + 1-202-555-0182
+     +61 1900 654 321
+
+     Испратете ни по е-пошта:
+     info@digital School.com
+     sales@digital School.com
+     маркетинг@digital School.com
+     careers@digital school.com ');
+ 
+ INSERT INTO users (email, username, password)
+ VALUES ('steve@gmail.com','steve','$2y$10$ujxUUXcqaXDO/r9/iW.TreX5HvLI5d/H.DF6nshotK7JnNovp078S');
+ 
+ INSERT INTO users (email, username, password)
+ VALUES ('james@gmail.com','james','$2y$10$7Q/0.zTjaNyLyU29niCuQO/CB3rZ2OPgYWi1RuTW.K49wionlnEPq');
+ 
+ INSERT INTO users (email, username, password)
+ VALUES ('luna@gmail.com','luna','$2y$10$L6tW30sgKs43Q7j7BZA9GeNmIfIlh0JSBLJTRW6046RfpkCV3icYu');
+
+//hash the password through this link https://phppasswordhash.com/
+ INSERT INTO category (category_name) VALUES ( 'new' );
+ 
+ INSERT INTO post (title, text, image, date_created, description, cat_id)
+ VALUES ('post1','opasdjioasjd','',CURRENT_TIMESTAMP(),'' , 1);
