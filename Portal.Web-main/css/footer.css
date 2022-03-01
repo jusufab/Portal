@@ -1,0 +1,258 @@
+    * {
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    footer {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 50px 100px;
+        background-color: #212529;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    footer .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    
+    footer .container .aboutus {
+        margin-right: 30px;
+        width: 20%;
+    }
+    
+    footer .container .aboutus h2 {
+        position: relative;
+        color: #fff;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    
+    footer .container .aboutus h2:before {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        border: 10px;
+        background-color: #005b6e;
+    }
+    
+    footer .container .aboutus p {
+        color: #999;
+    }
+    
+    .icon {
+        margin-top: 22px;
+        display: flex;
+    }
+    
+    .icon li {
+        list-style: none;
+    }
+    
+    .icon li a {
+        display: inline;
+        width: 40px;
+        height: 40px;
+        background-color: #222;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: 0.3s ease-in;
+    }
+    
+    .icon li a .fa {
+        color: #fff;
+        font-size: 18px;
+    }
+    
+    .icon li a:hover {
+        background-color: #005b6e;
+    }
+    /* links */
+    
+    footer .container .quickmenu h2 {
+        position: relative;
+        color: #fff;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    
+    footer .container .quickmenu h2:before {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background-color: #005b6e;
+    }
+    
+    footer .footer-navbar {
+        position: relative;
+    }
+    
+    .footer-navbar li {
+        list-style-type: none;
+    }
+    
+    .footer-navbar li a {
+        color: #999;
+        text-decoration: none;
+        margin-bottom: 8px;
+        display: inline-block;
+        transition: 0.3s ease-in;
+    }
+    
+    .footer-navbar li a:hover {
+        color: #005b6e;
+    }
+    /* contact */
+    
+    footer .container .contactus h2 {
+        position: relative;
+        color: #fff;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    
+    footer .container .contactus h2:before {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background-color: #005b6e;
+    }
+    
+    .contactus .info {
+        position: relative;
+    }
+    
+    .contactus .info li {
+        display: flex;
+        list-style: none;
+        margin-bottom: 16px;
+    }
+    
+    .contactus .info li span:nth-child(1) {
+        color: #fff;
+        font-size: 20px;
+        margin-right: 10px;
+    }
+    
+    .contactus .info li span {
+        color: #999;
+    }
+    
+    .contactus .info li span a {
+        color: #999;
+        text-decoration: none;
+    }
+    /* copyright */
+    
+    .copyright {
+        width: 100%;
+        background-color: #181818;
+        padding: 8px 100px;
+        text-align: center;
+        color: #999;
+    }
+    
+    .image img {
+        width: 70%;
+        height: 500px;
+        object-fit: scale-down;
+    }
+    
+    @media (max-width: 912px) {
+        footer {
+            padding: 40px;
+        }
+        footer .container {
+            flex-direction: column;
+        }
+        footer .container .aboutus {
+            margin-bottom: 25px;
+            width: 100%;
+        }
+        footer .container .contactus {
+            width: 100%;
+        }
+        .copyright {
+            padding: 6px 35px;
+        }
+        .image img {
+            width: 100%;
+        }
+        img {
+            width: 100%;
+        }
+        div {
+            white-space: normal;
+        }
+    }
+    
+    a.nav-link.btn.btn-primary.btn-lg.active {
+        border: 0px;
+        border-radius: 10px;
+        color: white;
+    }
+    
+    .text-content a {
+        text-decoration: none;
+        color: #0085A1;
+    }
+    
+    .text-content a:hover {
+        color: #0dbde0;
+    }
+    
+    .container .col-7 a {
+        font-size: 30px;
+        color: black;
+        text-decoration: none;
+        transition: 0.15s ease-in-out;
+    }
+    
+    .container .col-7 a:hover {
+        color: #0085A1;
+        text-decoration: none;
+    }
+    
+    div .text-content {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+    
+    div {
+        word-wrap: break-word;
+    }
+    
+    div .text-content {
+        width: 100%;
+        word-wrap: break-word;
+    }
+    
+    div .sidenav h2 {
+        text-align: center;
+    }
+    
+    div .sidenav ul li {
+        list-style-type: none;
+        text-align: left;
+    }
+    
+    div .sidenav ul li a {
+        text-decoration: none;
+    }
